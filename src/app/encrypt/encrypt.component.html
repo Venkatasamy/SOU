@@ -1,0 +1,205 @@
+<div class="culmn">
+    <header id="main_menu" class="header navbar-fixed-top">
+        <div class="main_menu_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="nave_menu">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </header>
+    <!--End of header -->
+    <form [formGroup]="encryptForm">
+    <section id="home" class="home">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 ">
+                        <div class="main_home_slider text-center">
+                            <div class="single_home_slider">
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <div class="single_home_slider">
+                                        <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                            <input type="textarea" class="inputText" name="input" formControlName="input">
+                                        </div>
+                                    </div>
+                                    <!-- <a class="btn btn-default btn-home" href="C:\nara\soundarya\3d-login123-correctone\3D-login\3D-login\index.html" role="button">Click here to Encrypt the DATA</a> -->
+                                    <a class="btn btn-default btn-home" (click) = "encrypt()"
+                                        role="button">Click here to Encrypt the DATA</a>
+
+
+
+                                    <!-- <a class="btn btn-default btn-home" href="C:\nara\soundarya\3d-login123-correctone\3D-login\3D-login\index.html" role="button">Click here to De-crypt the DATA</a> -->
+                                    <a class="btn btn-default btn-home" (click) = "deEncrypt()"
+                                        role="button">Click here to De-crypt the DATA</a>
+                                    <!--<a class="btn btn-default btn-home" href="C:\nara\soundarya\html-sample-page\Two\indexmerge.html" role="button">Back to Home Page</a> -->
+                                    <a class="btn btn-default btn-home" routerLink="/"
+                                        role="button">Back to Home Page</a>
+
+                                    <div>
+                                        <input type="textarea" class="inputText pad" [disabled]="true" name="output" formControlName="output">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single_home_slider" [hidden]="true">
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <h1>WELCOME TO OUR SERVICE</h1>
+                                    <p>We Encrypt the Data of Your Business</p>
+
+                                    <!-- <a class="btn btn-default btn-home" href="C:\nara\soundarya\html-sample-page\Two\indexmerge.html" role="button">Back to Home Page</a> -->
+                                    <a class="btn btn-default btn-home" routerLink="/"
+                                        role="button">Back to Home Page</a>
+                                </div>
+                            </div>
+                            <div class="single_home_slider" [hidden]="true">
+                                <div class="main_home wow fadeInUp" data-wow-duration="700ms">
+                                    <h1>WELCOME TO OUR SERVICE</h1>
+                                    <p>We De-crypt the Data of Your Business</p>
+                                    <!-- <a class="btn btn-default btn-home" href="C:\nara\soundarya\html-sample-page\Two\indexmerge.html" role="button">Back to Home Page</a> -->
+                                    <a class="btn btn-default btn-home" routerLink="/"
+                                        role="button">Back to Home Page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" [hidden]="true">
+        <div class="row">
+            <div class="main_portfolio sections">
+                <div class="heading_filter_menu">
+                    <div class="col-sm-4">
+                        <div class="head_title">
+                            <h3>LATEST PROJECT</h3>
+                            <div class="separator"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div id="filters" class="toolbar mb2 mt2">
+                            <button class="btn fil-cat filter active" href="" data-filter="all">All</button>
+                            <button class="btn fil-cat filter" data-rel="web" data-filter=".web">Websites</button>
+                            <button class="btn fil-cat filter" data-rel="flyers" data-filter=".flyers">Flyers</button>
+                            <button class="btn fil-cat filter" data-rel="bcards" data-filter=".bcards">Business
+                                Cards</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main_portfolio_content text-center">
+                    <div class="grid" [hidden]="true">
+                        <div class="grid-item grid-item--width2">
+                            <img src="assets/images/pf1.jpg" alt="" />
+                            <div class="grid_item_overlay all_overlay">
+                                <a href="assets/images/pf1.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf2.jpg" alt="" />
+                            <div class="grid_item_overlay all_overlay">
+                                <a href="assets/images/pf2.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf3.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf1.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf4.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf4.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf5.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf5.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item grid-item--width2">
+                            <img src="assets/images/pf6.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf6.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf7.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf7.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf8.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf6.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                        <div class="grid-item ">
+                            <img src="assets/images/pf9.jpg" alt="" />
+                            <div class="grid_item_overlay">
+                                <a href="assets/images/pf7.jpg" class="portfolio-img"> <i
+                                        class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+<!-- START SCROLL TO TOP  -->
+
+<div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="assets/js/gmaps.min.js"></script>
+
+
+<script>
+
+    function showmap() {
+        var mapOptions = {
+            zoom: 8,
+            scrollwheel: false,
+            center: new google.maps.LatLng(-34.397, 150.644),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+    }
+</script>
